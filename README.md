@@ -1,6 +1,14 @@
 
 # Meu maior projeto WEB
 Estou terminando um curso de NodeJS de mais de 500 aulas, e pra por em prática tudo o que aprendi, decidi fazer um ecosistema de blog completamente do zero... indo ALÉM do Crud básico, pensado para gerar receita (PIX, Insíginia), e para facilmente modificar qualquer coisa.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/46101859-c171-4004-95ee-62d2dcb3e8fa" />
+<img width="1520" height="526" alt="image" src="https://github.com/user-attachments/assets/9850e579-d38e-4ffe-b89e-92722df6000f" />
+<img width="900" height="1018" alt="image" src="https://github.com/user-attachments/assets/5b8427ab-633c-47e2-b7a2-6ea0701bd326" />
+<img width="800" height="417" alt="image" src="https://github.com/user-attachments/assets/9d1ba908-3d5e-4e3d-bcbe-63c10bbc7e5f" />
+<img width="521" height="501" alt="image" src="https://github.com/user-attachments/assets/797323c9-63da-4e37-8548-a5e24f3ed3be" />
+<img width="860" height="429" alt="image" src="https://github.com/user-attachments/assets/0603957b-0bd2-4a9b-92bf-dc42c77ac8f2" />
+<img width="1280" height="546" alt="image" src="https://github.com/user-attachments/assets/0bec1405-9e3f-4038-89c6-61b00098f112" />
+
 
 ## Recursos
 Para ir além do Crud básico, decidi ver até onde conseguiria levar esse projeto... e bem... o resultado foi essas implementações:
@@ -70,7 +78,7 @@ Você verá que tudo foi organizado de forma inteligente para evitar dor de cabe
 
 ### Um vídeo de demonstração básico
 Embora o vídeo demonstre o site em ação de forma "simples", lembre-se que há uma estrutura inteligente por trás de tudo para criar um sistema robusto e seguro.<br/>
-https://github.com/user-attachments/assets/09d3e4b4-a117-466b-bdd7-a41d0717c3b8
+https://github.com/user-attachments/assets/09d3e4b4-a117-466b-bdd7-a41d0717c3b8<br/>
 https://github.com/user-attachments/assets/3d9ce0a0-b2e0-4650-8ecc-ee5a46ac0efa
 
 ### Tem dúvidas?
