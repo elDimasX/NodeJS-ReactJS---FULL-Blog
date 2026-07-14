@@ -64,7 +64,7 @@ Para ir além do Crud básico, decidi ver até onde conseguiria levar esse proje
 
 ### Facilitação do código
 Quando comecei a desenvolver esse projeto, o que mais me veio na mente foi: **"E se alguém quiser rapidamente modificar algo nele?"**, então concentrei tudo em váriaveis, no .ENV, de forma que, se você quiser fazer o upload agora mesmo, você só precisa preencher os valores<br/><br/>
-TODA a estrutura de comentários, sistema de curtidas, badges e etc, foi pensando: **"E se o sistema se escalar rapidamente?"**, então usei métodos para que garantissem uma **boa escalação**, de forma inteligente...<br/>
+TODA a estrutura de comentários, sistema de curtidas, badges e etc, foi pensando: **"E se o sistema se escalar rapidamente?"**, então usei métodos para que garantissem uma **boa escalação**, de forma inteligente...<br/><br/>
 <img width="300" height="651" alt="Screenshot 2026-07-14 at 19-27-44 Cluster0 Data Cloud MongoDB Cloud" src="https://github.com/user-attachments/assets/c2c66ec9-1363-40b7-8260-f284f9b60cd7" />
 <img width="1499" height="236" alt="Screenshot 2026-07-14 at 19-27-35 Cluster0 Data Cloud MongoDB Cloud" src="https://github.com/user-attachments/assets/9c2b7a09-5bdb-4fe0-8c73-6c78c586500f" /><br/>
 Você verá que tudo foi organizado de forma inteligente para evitar dor de cabeça futuramente, e para que, se você quiser implementar algo novo, você possa.
@@ -82,9 +82,9 @@ Discord: **eldimas**
 Demorei meses pra fazer esse site, e aprender como faze-lo corretamente. Qualquer feedback caso você tenha, fique a vontade para comentar.
 
 ### Imagens de ALGUMAS telas<br/>
-<img width="1520" height="526" alt="image" src="https://github.com/user-attachments/assets/9850e579-d38e-4ffe-b89e-92722df6000f" /><br/>
-<img width="900" height="1018" alt="image" src="https://github.com/user-attachments/assets/5b8427ab-633c-47e2-b7a2-6ea0701bd326" /><br/>
-<img width="800" height="417" alt="image" src="https://github.com/user-attachments/assets/9d1ba908-3d5e-4e3d-bcbe-63c10bbc7e5f" /><br/>
-<img width="521" height="501" alt="image" src="https://github.com/user-attachments/assets/797323c9-63da-4e37-8548-a5e24f3ed3be" /><br/>
-<img width="860" height="429" alt="image" src="https://github.com/user-attachments/assets/0603957b-0bd2-4a9b-92bf-dc42c77ac8f2" /><br/>
-<img width="1280" height="546" alt="image" src="https://github.com/user-attachments/assets/0bec1405-9e3f-4038-89c6-61b00098f112" /><br/>
+<img width="1520" height="526" alt="image" src="https://github.com/user-attachments/assets/9850e579-d38e-4ffe-b89e-92722df6000f" /><br/><br/>
+<img width="900" height="1018" alt="image" src="https://github.com/user-attachments/assets/5b8427ab-633c-47e2-b7a2-6ea0701bd326" /><br/><br/>
+<img width="800" height="417" alt="image" src="https://github.com/user-attachments/assets/9d1ba908-3d5e-4e3d-bcbe-63c10bbc7e5f" /><br/><br/>
+<img width="521" height="501" alt="image" src="https://github.com/user-attachments/assets/797323c9-63da-4e37-8548-a5e24f3ed3be" /><br/><br/>
+<img width="860" height="429" alt="image" src="https://github.com/user-attachments/assets/0603957b-0bd2-4a9b-92bf-dc42c77ac8f2" /><br/><br/>
+<img width="1280" height="546" alt="image" src="https://github.com/user-attachments/assets/0bec1405-9e3f-4038-89c6-61b00098f112" /><br/><br/>
