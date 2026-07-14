@@ -63,7 +63,7 @@ Para ir além do Crud básico, decidi ver até onde conseguiria levar esse proje
 #### Ainda está faltando algumas coisas...
 
 ### Facilitação do código
-Quando comecei a desenvolver esse projeto, o que mais me veio na mente foi: **"E se alguém quiser rapidamente modificar algo nele?"**, então concentrei tudo em váriaveis, no .ENV, de forma que, se você quiser fazer o upload agora mesmo, você só precisa preencher os valores<br/>
+Quando comecei a desenvolver esse projeto, o que mais me veio na mente foi: **"E se alguém quiser rapidamente modificar algo nele?"**, então concentrei tudo em váriaveis, no .ENV, de forma que, se você quiser fazer o upload agora mesmo, você só precisa preencher os valores<br/><br/>
 TODA a estrutura de comentários, sistema de curtidas, badges e etc, foi pensando: **"E se o sistema se escalar rapidamente?"**, então usei métodos para que garantissem uma **boa escalação**, de forma inteligente...<br/>
 <img width="300" height="651" alt="Screenshot 2026-07-14 at 19-27-44 Cluster0 Data Cloud MongoDB Cloud" src="https://github.com/user-attachments/assets/c2c66ec9-1363-40b7-8260-f284f9b60cd7" />
 <img width="1499" height="236" alt="Screenshot 2026-07-14 at 19-27-35 Cluster0 Data Cloud MongoDB Cloud" src="https://github.com/user-attachments/assets/9c2b7a09-5bdb-4fe0-8c73-6c78c586500f" /><br/>
@@ -75,7 +75,7 @@ Embora o vídeo demonstre o site em ação de forma "simples", lembre-se que há
 - [Vídeo de demonstração 2](https://github.com/user-attachments/assets/3d9ce0a0-b2e0-4650-8ecc-ee5a46ac0efa)
 
 ### Tem dúvidas?
-Eu fiz o site pensando em VOCÊ. Eu quero que você entenda o código facilmente, e que, se quiser adaptar pro seu estilo (caso você não queira um blog), você pode mudar facilmente. No entanto, se você tiver dúvidas ou quiser ajuda para implemetarmos ele no ar juntos, estarei disponível para ajuda-lo.<br/>
+Eu fiz o site **pensando em VOCÊ**. Eu quero que você entenda o código facilmente, e que, se quiser adaptar pro seu estilo (caso você não queira um blog), você pode mudar facilmente. No entanto, se você tiver dúvidas ou quiser ajuda para implemetarmos ele no ar juntos, estarei disponível para ajuda-lo.<br/>
 Discord: **eldimas**
 
 #### É isso....
