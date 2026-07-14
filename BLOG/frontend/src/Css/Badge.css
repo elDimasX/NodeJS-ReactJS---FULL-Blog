@@ -1,0 +1,499 @@
+/* ========================= */
+/* BADGES BASE */
+/* ========================= */
+.badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  position: relative;
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+  font-weight: 750;
+  line-height: 1;
+
+  background: var(--color);
+  color: var(--color-text-white);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    0 4px 14px rgba(0,0,0,0.25);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.badge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+
+  transform: translateX(-130%);
+  transition: 0.5s ease;
+  pointer-events: none;
+}
+
+.badge-wrapper:hover .badge::before {
+  transform: translateX(130%);
+}
+
+.badge-wrapper:hover .badge {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+/* ========================= */
+/* TOOLTIP */
+/* ========================= */
+.badge-wrapper {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  user-select: none;
+}
+
+.badge-wrapper::selection,
+.badge-wrapper *::selection {
+  background: transparent;
+  color: inherit;
+}
+
+.badge-tooltip,
+.badge-tooltip-admin {
+  position: absolute;
+  z-index: 50;
+
+  bottom: calc(100% + 10px);
+  left: 50%;
+
+  transform: translateX(-50%) translateY(8px) scale(0.96);
+
+  min-width: 150px;
+  max-width: 240px;
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
+    var(--color-less-black);
+
+  color: var(--color-text-primary);
+
+  padding: 9px 12px;
+  border-radius: var(--radius-md);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+
+  white-space: normal;
+
+  opacity: 0;
+  pointer-events: none;
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.35),
+    0 0 18px rgba(0,212,255,0.06);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.badge-tooltip::after,
+.badge-tooltip-admin::after {
+  content: "";
+  position: absolute;
+
+  top: 100%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--color-less-black) transparent transparent transparent;
+}
+
+/* hover / ativo */
+.badge-wrapper:hover .badge-tooltip,
+.badge-wrapper.active .badge-tooltip,
+[data-tier="moderator"]:hover .badge-tooltip-admin,
+[data-tier="moderator"].active .badge-tooltip-admin,
+[data-tier="admin"]:hover .badge-tooltip-admin,
+[data-tier="admin"].active .badge-tooltip-admin {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+/* ========================= */
+/* MINI MODE */
+/* ========================= */
+.badge-wrapper.mini .badge {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.badge-wrapper.mini .badge-icon {
+  font-size: 0.72rem;
+}
+
+/* ========================= */
+/* TIERS - BADGE */
+/* ========================= */
+
+/* APOIADOR */
+[data-tier="apoiador"] .badge {
+  opacity: 0.9;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    0 4px 12px rgba(0,0,0,0.22);
+}
+
+/* COLABORADOR */
+[data-tier="colaborador"] .badge {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    0 0 10px color-mix(in srgb, var(--color) 65%, transparent);
+}
+
+/* PATROCINADOR */
+[data-tier="patrocinador"] .badge {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    0 0 14px color-mix(in srgb, var(--color) 75%, transparent),
+    0 0 26px color-mix(in srgb, var(--color) 50%, transparent);
+
+  transform: scale(1.02);
+}
+
+/* ELITE */
+[data-tier="elite"] .badge {
+  background: linear-gradient(
+    135deg,
+    var(--color),
+    var(--tier-lenda-secondary),
+    var(--color-text-white)
+  );
+
+  background-size: 220% 220%;
+  animation: gradientMove 4s ease infinite;
+
+  color: var(--color-black);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.45),
+    0 0 16px var(--color),
+    0 0 30px rgba(0,212,255,0.35);
+}
+
+/* LENDA */
+[data-tier="lenda"] .badge {
+  background: linear-gradient(
+    270deg,
+    var(--tier-lenda-primary),
+    var(--tier-lenda-secondary),
+    var(--tier-lenda-primary)
+  );
+
+  background-size: 400% 400%;
+  animation: insaneGlow 3s ease infinite;
+
+  color: var(--color-black);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.4),
+    0 0 18px var(--tier-lenda-primary),
+    0 0 36px var(--tier-lenda-secondary),
+    0 0 54px rgba(34,197,94,0.45);
+
+  transform: scale(1.05);
+}
+
+/* MAX */
+[data-tier="max"] .badge {
+  background: linear-gradient(
+    270deg,
+    var(--tier-max-primary),
+    var(--tier-max-secondary),
+    var(--tier-max-primary)
+  );
+
+  background-size: 400% 400%;
+  animation: insaneGlow 3s ease infinite;
+
+  color: var(--color-black);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.4),
+    0 0 18px var(--tier-max-primary),
+    0 0 36px var(--tier-max-secondary-strong),
+    0 0 54px rgba(230,198,18,0.45);
+
+  transform: scale(1.05);
+}
+
+/* ========================= */
+/* ROLE PROTECTION */
+/* ========================= */
+.badge-wrapper.role[data-tier="moderator"] .badge,
+.badge-wrapper.role[data-tier="admin"] .badge {
+  background: var(--color);
+  color: var(--color-text-white);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    0 0 10px color-mix(in srgb, var(--color) 70%, transparent),
+    0 0 18px color-mix(in srgb, var(--color) 45%, transparent);
+
+  transform: scale(1);
+  animation: none;
+}
+
+/* ========================= */
+/* PERFIL CARD */
+/* ========================= */
+.perfil-card[data-tier] {
+  border-radius: var(--radius-lg);
+  transition:
+    border-color var(--transition-normal),
+    box-shadow var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+/* APOIADOR */
+.perfil-card[data-tier="apoiador"] {
+  border: 2px solid rgba(128,128,128,0.35);
+}
+
+/* COLABORADOR */
+.perfil-card[data-tier="colaborador"] {
+  border: 2px solid var(--tier-colaborador);
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.25);
+}
+
+/* PATROCINADOR */
+.perfil-card[data-tier="patrocinador"] {
+  border: 2px solid var(--tier-patrocinador);
+  box-shadow:
+    0 0 10px rgba(249, 115, 22, 0.35),
+    0 0 20px rgba(249, 115, 22, 0.18);
+}
+
+/* ELITE */
+.perfil-card[data-tier="elite"] {
+  border: 2px solid var(--tier-elite);
+  box-shadow:
+    0 0 12px rgba(14, 165, 233, 0.38),
+    0 0 26px rgba(14, 165, 233, 0.2);
+
+  animation: eliteGlow 3s ease infinite;
+}
+
+/* LENDA */
+.perfil-card[data-tier="lenda"] {
+  border: 2px solid var(--tier-lenda-primary);
+  box-shadow:
+    0 0 16px rgba(34, 197, 94, 0.35),
+    0 0 34px rgba(0, 240, 255, 0.18),
+    0 0 50px rgba(34, 197, 94, 0.12);
+
+  animation: lendaGlow 3s ease infinite;
+}
+
+/* MAX */
+.perfil-card[data-tier="max"] {
+  border: 2px solid var(--tier-max-primary);
+  box-shadow:
+    0 0 16px rgba(230, 198, 18, 0.38),
+    0 0 34px rgba(0, 119, 255, 0.22),
+    0 0 50px rgba(230, 198, 18, 0.14);
+
+  animation: maxGlow 3s ease infinite;
+}
+
+/* ========================= */
+/* ANIMAÇÕES */
+/* ========================= */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes insaneGlow {
+  0% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    background-position: 100% 50%;
+    filter: hue-rotate(60deg);
+  }
+
+  100% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.16);
+  }
+}
+
+@keyframes eliteGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 12px rgba(14, 165, 233, 0.38),
+      0 0 26px rgba(14, 165, 233, 0.2);
+  }
+
+  50% {
+    box-shadow:
+      0 0 18px rgba(14, 165, 233, 0.55),
+      0 0 38px rgba(14, 165, 233, 0.28);
+  }
+}
+
+@keyframes lendaGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 16px rgba(34, 197, 94, 0.35),
+      0 0 34px rgba(0, 240, 255, 0.18),
+      0 0 50px rgba(34, 197, 94, 0.12);
+  }
+
+  50% {
+    box-shadow:
+      0 0 24px rgba(34, 197, 94, 0.5),
+      0 0 50px rgba(0, 240, 255, 0.28),
+      0 0 76px rgba(34, 197, 94, 0.18);
+  }
+}
+
+@keyframes maxGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 16px rgba(230, 198, 18, 0.38),
+      0 0 34px rgba(0, 119, 255, 0.22),
+      0 0 50px rgba(230, 198, 18, 0.14);
+  }
+
+  50% {
+    box-shadow:
+      0 0 24px rgba(230, 198, 18, 0.55),
+      0 0 50px rgba(0, 119, 255, 0.32),
+      0 0 76px rgba(230, 198, 18, 0.2);
+  }
+}
+
+/* animação dos ícones */
+[data-tier="elite"] .badge-icon,
+[data-tier="lenda"] .badge-icon,
+[data-tier="max"] .badge-icon {
+  animation: badgePulse 1.8s infinite;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+@media (max-width: 920px) {
+  .badges {
+    gap: 8px;
+  }
+
+  .badge {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .badge-icon {
+    font-size: 0.72rem;
+  }
+
+  .badge-tooltip,
+  .badge-tooltip-admin {
+    width: 180px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .badges {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .badge {
+    padding: 5px 9px;
+    font-size: 0.78rem;
+  }
+
+  .badge-tooltip,
+  .badge-tooltip-admin {
+    font-size: 0.7rem;
+    padding: 7px 10px;
+    max-width: 170px;
+  }
+}
+
+@media (max-width: 500px) {
+  .badges {
+    gap: 6px;
+  }
+
+  .badge {
+    font-size: 0.73rem;
+    padding: 5px 8px;
+  }
+
+  .badge-wrapper.mini .badge {
+    width: 26px;
+    height: 26px;
+  }
+
+  .badge-wrapper.mini .badge-icon {
+    font-size: 0.65rem;
+  }
+
+  .badge-tooltip,
+  .badge-tooltip-admin {
+    left: 50%;
+    max-width: 150px;
+  }
+}

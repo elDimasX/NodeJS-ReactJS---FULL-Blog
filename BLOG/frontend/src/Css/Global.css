@@ -1,0 +1,609 @@
+
+:root {
+
+  --color-text-black: #131111;
+  --color-text-white: #fff;
+  --color-black: #000;
+  --color-less-black: #111;
+
+  /* ====== STATE BACKGROUNDS ====== */
+  --color-success-bg: rgba(34, 197, 94, 0.08);
+  --color-success-border: rgba(34, 197, 94, 0.3);
+
+  --color-danger-bg: rgba(255, 77, 109, 0.08);
+  --color-danger-border: rgba(255, 77, 109, 0.3);
+
+  /* ====== BACKGROUND ====== */
+  --color-bg: #0F1115;
+  --color-surface: #1A1D24;
+  --color-surface-elevated: #222631;
+  --color-border: #2C313C;
+
+  /* ====== TEXT ====== */
+  --color-text-primary: #E6EAF2;
+  --color-text-secondary: #A5ADBA;
+  --color-text-muted: #6C7483;
+
+  /* ====== ACCENT ====== */
+  --color-accent: #00D4FF;
+  --color-accent-hover: #00B8E6;
+  --color-accent-soft: rgba(0, 212, 255, 0.15);
+
+  /* ====== STATES ====== */
+  --color-success: #22C55E;
+  --color-danger: #FF4D6D;
+  --color-warning: #F59E0B;
+
+  --color-eee: #eee;
+  --color-white: #fff;
+
+  /* ====== SHADOWS ====== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  /* ====== RADIUS ====== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* ====== TRANSITIONS ====== */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+
+
+  /* Dos badges */
+  --less-black: var(--color-less-black);
+
+  /* tiers */
+  --tier-colaborador: #facc15;
+  --tier-patrocinador: #f97316;
+  --tier-elite: #0ea5e9;
+  --tier-lenda-primary: #22C55E;
+  --tier-lenda-secondary: #00f0ff;
+  --tier-max-primary: #e6c612;
+  --tier-max-secondary: #0ea5e9;
+  --tier-max-secondary-strong: #0077ff;
+
+  /* efeitos */
+  --transition-default: all 0.3s ease;
+}
+
+
+/* ==========================================================================
+   SCROLLBAR GLOBAL CUSTOMIZATION
+   ========================================================================== */
+
+/* Configuração para Navegadores Webkit (Chrome, Safari, Edge, Opera) */
+::-webkit-scrollbar {
+  width: 10px;  /* Largura do scroll vertical */
+  height: 10px; /* Altura do scroll horizontal */
+}
+
+/* O "trilho" (background do scroll) */
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+/* O "polegar" (a barra que desliza) */
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-elevated);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-bg); /* Cria um espaçamento visual elegante */
+  transition: var(--transition-normal);
+}
+
+/* Efeito de Hover no polegar */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted); /* Fica um pouco mais claro ao passar o mouse */
+}
+
+/* Quando o usuário está clicando/arrastando */
+::-webkit-scrollbar-thumb:active {
+  background: var(--color-accent); /* Ganha o destaque da sua cor principal */
+}
+
+/* Firefox (Suporte limitado, mas funcional) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-surface-elevated) var(--color-bg);
+}
+
+/* Estilo opcional para áreas menores (ex: um chat ou lista lateral) */
+.custom-scroll-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll-thin::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+}
+
+
+/* =========================
+   GLOBAL BASE
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-size: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  background:
+    radial-gradient(circle at top right, rgba(0, 212, 255, 0.07), transparent 32%),
+    radial-gradient(circle at bottom left, rgba(14, 165, 233, 0.06), transparent 35%),
+    var(--color-bg);
+
+  color: var(--color-text-primary);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   TITLES
+========================= */
+h1,
+h2,
+h3 {
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+h3, .h3 {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 700;
+}
+
+p {
+  /* color: var(--color-text-secondary); */
+  line-height: 1.65;
+}
+
+/* =========================
+   SELECTION / SCROLLBAR
+========================= */
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-text-white);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+  border: 2px solid var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-hover);
+}
+
+/* =========================
+   SKELETON CARD
+========================= */
+.skeleton-card {
+  position: relative;
+  height: 120px;
+  margin-bottom: 14px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-surface) 0%,
+      var(--color-surface-elevated) 45%,
+      var(--color-surface) 100%
+    );
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.skeleton-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 212, 255, 0.10),
+    transparent
+  );
+
+  transform: translateX(-100%);
+  animation: skeleton-shimmer 1.4s infinite;
+}
+
+@keyframes skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* =========================
+   RECAPTCHA
+========================= */
+.grecaptcha-badge {
+  display: none !important;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+.input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.025),
+      rgba(255, 255, 255, 0.01)
+    ),
+    var(--color-surface-elevated);
+
+  color: var(--color-text-primary);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  font-size: 0.95rem;
+
+  outline: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input:hover {
+  border-color: rgba(0, 212, 255, 0.25);
+}
+
+.input:focus {
+  border-color: var(--color-accent);
+  box-shadow:
+    0 0 0 3px var(--color-accent-soft),
+    0 0 22px rgba(0, 212, 255, 0.08);
+}
+
+.input.error {
+  border-color: var(--color-danger);
+}
+
+.input.error:focus {
+  box-shadow:
+    0 0 0 3px rgba(255, 77, 109, 0.18),
+    0 0 22px rgba(255, 77, 109, 0.08);
+}
+
+.input.success {
+  border-color: var(--color-success);
+}
+
+.input.success:focus {
+  box-shadow:
+    0 0 0 3px rgba(34, 197, 94, 0.16),
+    0 0 22px rgba(34, 197, 94, 0.08);
+}
+
+/* =========================
+   DISABLED
+========================= */
+*:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.55 !important;
+  background-color: var(--color-border) !important;
+  color: var(--color-text-muted) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+*:disabled:hover {
+  border-color: transparent !important;
+  transform: none !important;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+.error-message,
+.success-message {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+
+  font-size: 0.92rem;
+  margin: 0.75rem 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.error-message {
+  background: var(--color-danger-bg);
+  border: 1px solid var(--color-danger-border);
+  color: var(--color-danger);
+}
+
+.success-message {
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  color: var(--color-success);
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.025),
+      rgba(255,255,255,0.01)
+    ),
+    var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-normal),
+    border-color var(--transition-normal),
+    background var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 212, 255, 0.08),
+    transparent 35%
+  );
+
+  opacity: 0;
+  transition: var(--transition-normal);
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  background: var(--color-surface-elevated);
+  border-color: rgba(0, 212, 255, 0.18);
+  box-shadow: var(--shadow-md);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   BUTTON PRIMARY
+========================= */
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-accent),
+      var(--color-accent-hover)
+    );
+
+  color: var(--color-black);
+
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+
+  cursor: pointer;
+
+  text-align: center;
+  font-weight: 750;
+
+  box-shadow:
+    0 8px 24px rgba(0, 212, 255, 0.18),
+    inset 0 1px 0 rgba(255,255,255,0.35);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.button-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow:
+    0 12px 30px rgba(0, 212, 255, 0.28),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.button-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-shadow: 0 0 14px rgba(0, 212, 255, 0.35);
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+.checkbox-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+  color: var(--color-text-primary);
+
+  user-select: none;
+  transition: color var(--transition-fast);
+}
+
+.checkbox-container:hover {
+  color: var(--color-accent);
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-box {
+  width: 22px;
+  height: 22px;
+
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-border);
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--color-surface-elevated),
+      var(--color-surface)
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    border-color var(--transition-normal),
+    box-shadow var(--transition-normal),
+    background var(--transition-normal),
+    transform var(--transition-fast);
+
+  position: relative;
+}
+
+.checkbox-container:hover .checkbox-box {
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 0 12px var(--color-accent-soft);
+}
+
+.checkbox-box::after {
+  content: "";
+  width: 10px;
+  height: 5px;
+
+  border-left: 2px solid var(--color-black);
+  border-bottom: 2px solid var(--color-black);
+
+  transform: rotate(-45deg) scale(0);
+  opacity: 0;
+
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
+
+  position: absolute;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkbox-box {
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-accent),
+      var(--color-accent-hover)
+    );
+
+  border-color: var(--color-accent);
+  box-shadow:
+    0 0 0 3px var(--color-accent-soft),
+    0 0 18px rgba(0, 212, 255, 0.25);
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkbox-box::after {
+  transform: rotate(-45deg) scale(1);
+  opacity: 1;
+}
+
+
+/* [data-theme="purple"] {
+  --color-bg: #0D0C1D;
+  --color-surface: #16142B;
+  --color-surface-elevated: #1F1C3A;
+  --color-accent: #7C5CFF;
+  --color-accent-hover: #6846F5;
+} */
+
+

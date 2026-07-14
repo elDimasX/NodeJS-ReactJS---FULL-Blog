@@ -1,0 +1,239 @@
+/* ========================= */
+/* AUTH GOOGLE */
+/* ========================= */
+.auth-google {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  background:
+    radial-gradient(circle at top right, rgba(0, 212, 255, 0.09), transparent 34%),
+    radial-gradient(circle at bottom left, rgba(14, 165, 233, 0.07), transparent 36%),
+    var(--color-bg);
+
+  color: var(--color-text-primary);
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+.auth-google-card {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 460px;
+
+  padding: 36px 44px;
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.012)),
+    var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  text-align: center;
+
+  box-shadow:
+    var(--shadow-md),
+    0 0 35px rgba(0, 212, 255, 0.05);
+
+  animation: fadeIn 0.28s ease;
+}
+
+.auth-google-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.03),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* ========================= */
+/* ICON */
+/* ========================= */
+.auth-google-icon {
+  position: relative;
+  z-index: 1;
+
+  font-size: 58px;
+
+  margin-bottom: 16px;
+
+  display: flex;
+  justify-content: center;
+
+  filter: drop-shadow(0 0 16px rgba(0,0,0,0.18));
+}
+
+/* ========================= */
+/* TEXT */
+/* ========================= */
+.auth-google-card h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+
+  color: var(--color-text-primary);
+}
+
+.auth-google-text {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 12px;
+
+  font-size: 0.92rem;
+  line-height: 1.6;
+
+  color: var(--color-text-secondary);
+}
+
+/* ========================= */
+/* SUCCESS */
+/* ========================= */
+.icon-success {
+  color: var(--color-white);
+
+  background: linear-gradient(
+    135deg,
+    var(--color-success),
+    #16a34a
+  );
+
+  padding: 14px;
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 6px rgba(34, 197, 94, 0.12),
+    0 10px 28px rgba(34, 197, 94, 0.25);
+}
+
+/* ========================= */
+/* ERROR */
+/* ========================= */
+.icon-error {
+  color: var(--color-white);
+
+  background: linear-gradient(
+    135deg,
+    var(--color-danger),
+    #ff2a50
+  );
+
+  padding: 14px;
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 6px rgba(255, 77, 109, 0.12),
+    0 10px 28px rgba(255, 77, 109, 0.25);
+}
+
+/* ========================= */
+/* LOADING */
+/* ========================= */
+.icon-loading {
+  color: var(--color-accent);
+
+  animation: spin 1s linear infinite;
+
+  filter: drop-shadow(0 0 16px rgba(0, 212, 255, 0.4));
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+@media (max-width: 920px) {
+  .auth-google-card {
+    max-width: 420px;
+    padding: 30px 36px;
+  }
+
+  .auth-google-icon {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-google-card {
+    max-width: 390px;
+
+    padding: 28px 30px;
+
+    border-radius: var(--radius-md);
+  }
+
+  .auth-google-card h1 {
+    font-size: 1.08rem;
+  }
+
+  .auth-google-text {
+    font-size: 0.86rem;
+  }
+
+  .auth-google-icon {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 500px) {
+  .auth-google-card {
+    max-width: 100%;
+
+    padding: 24px 18px;
+  }
+
+  .auth-google-icon {
+    font-size: 44px;
+  }
+
+  .auth-google-card h1 {
+    font-size: 1rem;
+  }
+
+  .auth-google-text {
+    font-size: 0.8rem;
+  }
+}

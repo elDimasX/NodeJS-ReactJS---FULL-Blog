@@ -1,0 +1,473 @@
+/* ========================= */
+/* PERFIL CARD */
+/* ========================= */
+.perfil-card {
+  position: relative;
+  overflow: hidden;
+
+  max-width: 470px;
+  width: min(99%, 470px);
+
+  margin: 60px auto;
+
+  background:
+    radial-gradient(circle at top right, rgba(0, 212, 255, 0.07), transparent 36%),
+    linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01)),
+    var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-md),
+    0 0 28px rgba(0, 212, 255, 0.04);
+
+  transition:
+    transform var(--transition-normal),
+    border-color var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.perfil-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 212, 255, 0.2);
+
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.38),
+    0 0 30px rgba(0, 212, 255, 0.08);
+}
+
+/* ========================= */
+/* BANNER */
+/* ========================= */
+.perfil-banner {
+  position: relative;
+
+  height: 145px;
+
+  background-size: cover;
+  background-position: center;
+
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+
+  transition:
+    filter var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+.perfil-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.05),
+      rgba(15,17,21,0.78)
+    );
+
+  pointer-events: none;
+}
+
+.perfil-banner:hover {
+  cursor: pointer;
+  filter: brightness(1.08);
+}
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+.perfil-body {
+  position: relative;
+  z-index: 1;
+
+  padding: 22px;
+  text-align: center;
+}
+
+/* ========================= */
+/* AVATAR */
+/* ========================= */
+.perfil-avatar {
+  width: 96px;
+  height: 96px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 4px solid var(--color-surface);
+  outline: 2px solid rgba(0, 212, 255, 0.28);
+
+  margin-top: -70px;
+
+  background: var(--color-surface-elevated);
+
+  box-shadow:
+    0 0 0 4px rgba(0, 212, 255, 0.05),
+    0 12px 30px rgba(0,0,0,0.35);
+
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    outline-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.perfil-avatar:hover {
+  cursor: pointer;
+  opacity: 0.92;
+  transform: scale(1.04);
+  outline-color: var(--color-accent);
+
+  box-shadow:
+    0 0 0 4px var(--color-accent-soft),
+    0 14px 34px rgba(0,0,0,0.42);
+}
+
+/* ========================= */
+/* NOME */
+/* ========================= */
+.perfil-body h2 {
+  margin-top: 12px;
+  margin-bottom: 4px;
+
+  color: var(--color-text-primary);
+
+  font-size: 1.45rem;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+
+.perfil-body h2.moderator,
+.perfil-body h2.admin {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 4px 9px;
+  margin-left: 8px;
+
+  border-radius: 999px;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  background: linear-gradient(135deg, var(--color-warning), #f97316);
+  color: var(--color-black);
+
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.28);
+}
+
+.perfil-body h2.admin {
+  background: linear-gradient(135deg, var(--color-danger), #ff2a50);
+  color: var(--color-text-white);
+
+  box-shadow: 0 0 16px rgba(255, 77, 109, 0.32);
+}
+
+.perfil-nome-real {
+  color: var(--color-text-secondary);
+  font-size: 0.88rem;
+}
+
+/* ========================= */
+/* BIO */
+/* ========================= */
+.perfil-bio {
+  margin: 14px auto 0;
+
+  max-width: 360px;
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+
+  color: var(--color-text-secondary);
+}
+
+/* ========================= */
+/* INFOS */
+/* ========================= */
+.perfil-info {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.perfil-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 10px;
+
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 999px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.86rem;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.perfil-item:hover {
+  background: rgba(0, 212, 255, 0.06);
+  border-color: rgba(0, 212, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.perfil-item span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.perfil-item svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+.btn-editar,
+.btn-share,
+.btn-logout,
+.btn-like,
+.btn-disable {
+  position: relative;
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+
+  padding: 11px 16px;
+  margin-top: 11px;
+
+  border: none;
+  border-radius: var(--radius-md);
+
+  font-weight: 800;
+  font-size: 0.92rem;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--transition-fast),
+    filter var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.btn-editar::before,
+.btn-share::before,
+.btn-logout::before,
+.btn-like::before,
+.btn-disable::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.28),
+    transparent
+  );
+
+  transform: translateX(-120%);
+  transition: 0.5s ease;
+}
+
+.btn-editar:hover::before,
+.btn-share:hover::before,
+.btn-logout:hover::before,
+.btn-like:hover::before,
+.btn-disable:hover::before {
+  transform: translateX(120%);
+}
+
+.btn-editar:hover,
+.btn-share:hover,
+.btn-like:hover,
+.btn-logout:hover,
+.btn-disable:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* Editar / Share / Like */
+.btn-editar,
+.btn-share,
+.btn-like {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+  color: var(--color-black);
+
+  box-shadow:
+    0 8px 22px rgba(0, 212, 255, 0.16),
+    inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+/* Logout */
+.btn-logout {
+  background: linear-gradient(135deg, var(--color-danger), #ff2a50);
+  color: var(--color-text-white);
+
+  box-shadow:
+    0 8px 22px rgba(255, 77, 109, 0.18),
+    inset 0 1px 0 rgba(255,255,255,0.22);
+}
+
+/* Disable */
+.btn-disable {
+  background: linear-gradient(135deg, var(--color-warning), #f97316);
+  color: var(--color-black);
+
+  box-shadow:
+    0 8px 22px rgba(245, 158, 11, 0.18),
+    inset 0 1px 0 rgba(255,255,255,0.28);
+}
+
+.btn-editar:active,
+.btn-share:active,
+.btn-logout:active,
+.btn-like:active,
+.btn-disable:active {
+  transform: scale(0.98);
+}
+
+/* Estado curtido */
+.btn-like.liked {
+  background: linear-gradient(135deg, var(--color-success), #16a34a);
+  color: var(--color-black);
+
+  transform: scale(1.02);
+
+  box-shadow:
+    0 0 0 3px rgba(34, 197, 94, 0.15),
+    0 10px 26px rgba(34, 197, 94, 0.22);
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+@media (max-width: 920px) {
+  .perfil-card {
+    margin: 42px auto;
+  }
+
+  .perfil-banner {
+    height: 126px;
+  }
+
+  .perfil-avatar {
+    width: 84px;
+    height: 84px;
+    margin-top: -58px;
+  }
+}
+
+@media (max-width: 768px) {
+  .perfil-card {
+    margin: 30px auto;
+    border-radius: var(--radius-md);
+  }
+
+  .perfil-banner {
+    height: 116px;
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+  }
+
+  .perfil-body {
+    padding: 18px;
+  }
+
+  .perfil-avatar {
+    width: 78px;
+    height: 78px;
+    margin-top: -50px;
+  }
+
+  .perfil-body h2 {
+    font-size: 1.28rem;
+  }
+
+  .perfil-bio {
+    font-size: 0.84rem;
+  }
+
+  .perfil-info {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .perfil-card {
+    margin: 20px 10px;
+    width: auto;
+  }
+
+  .perfil-banner {
+    height: 104px;
+  }
+
+  .perfil-avatar {
+    width: 68px;
+    height: 68px;
+    margin-top: -43px;
+  }
+
+  .perfil-body h2 {
+    font-size: 1.14rem;
+  }
+
+  .perfil-nome-real {
+    font-size: 0.78rem;
+  }
+
+  .perfil-bio {
+    font-size: 0.78rem;
+  }
+
+  .perfil-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .perfil-item {
+    font-size: 0.78rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-editar,
+  .btn-share,
+  .btn-logout,
+  .btn-like,
+  .btn-disable {
+    gap: 6px;
+    font-size: 0.86rem;
+    padding: 10px 14px;
+  }
+
+  .btn-editar svg,
+  .btn-share svg,
+  .btn-logout svg,
+  .btn-like svg {
+    font-size: 14px;
+  }
+}
