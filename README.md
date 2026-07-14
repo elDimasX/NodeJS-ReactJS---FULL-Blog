@@ -1,6 +1,6 @@
 
 # Meu maior projeto WEB
-Estou terminando um curso de NodeJS de mais de 500 aulas, e pra por em prática tudo o que aprendi, decidi fazer um ecosistema de blog completamente do zero... indo ALÉM do Crud básico, pensado para gerar receita (PIX, Insíginia), e para facilmente modificar qualquer coisa.<br/>
+Estou terminando um curso de NodeJS de mais de 500 aulas, e pra por em prática tudo o que aprendi, decidi fazer um ecosistema de blog completamente do zero... indo ALÉM do Crud básico, pensado para gerar receita (**PIX**, Insíginia), e para facilmente modificar qualquer coisa.<br/><br/>
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/46101859-c171-4004-95ee-62d2dcb3e8fa" /><br/>
 
 ## Recursos
@@ -44,7 +44,7 @@ Para ir além do Crud básico, decidi ver até onde conseguiria levar esse proje
 - Paginação
 
 ### Receitas
-- MercadoPago como principal uso de pagamento. Com sistema de badges usados para incentivar os usuários
+- MercadoPago como principal uso de pagamento (QR Code, ou PIX copia-cola). Com sistema de badges usados para incentivar os usuários
 
 ### Proteções no Servidor
 - Sistema CAPTCHA para impedir bots na maioria das operações (Captcha)
@@ -70,7 +70,7 @@ TODA a estrutura de comentários, sistema de curtidas, badges e etc, foi pensand
 Você verá que tudo foi organizado de forma inteligente para evitar dor de cabeça futuramente, e para que, se você quiser implementar algo novo, você possa.
 
 ### Um vídeo de demonstração básico
-Embora o vídeo demonstre o site em ação de forma "simples", lembre-se que há uma estrutura inteligente por trás de tudo para criar um sistema robusto e seguro.<br/>
+Embora o vídeo demonstre o site em ação de forma "simples", lembre-se que há uma estrutura inteligente por trás de tudo para criar um sistema robusto e seguro.<br/><br/>
 - [Vídeo de demonstração 1](https://github.com/user-attachments/assets/09d3e4b4-a117-466b-bdd7-a41d0717c3b8)
 - [Vídeo de demonstração 2](https://github.com/user-attachments/assets/3d9ce0a0-b2e0-4650-8ecc-ee5a46ac0efa)
 
@@ -81,7 +81,7 @@ Discord: **eldimas**
 #### É isso....
 Demorei meses pra fazer esse site, e aprender como faze-lo corretamente. Qualquer feedback caso você tenha, fique a vontade para comentar.
 
-### Imagens de ALGUMAS telas
+### Imagens de ALGUMAS telas<br/>
 <img width="1520" height="526" alt="image" src="https://github.com/user-attachments/assets/9850e579-d38e-4ffe-b89e-92722df6000f" /><br/>
 <img width="900" height="1018" alt="image" src="https://github.com/user-attachments/assets/5b8427ab-633c-47e2-b7a2-6ea0701bd326" /><br/>
 <img width="800" height="417" alt="image" src="https://github.com/user-attachments/assets/9d1ba908-3d5e-4e3d-bcbe-63c10bbc7e5f" /><br/>
