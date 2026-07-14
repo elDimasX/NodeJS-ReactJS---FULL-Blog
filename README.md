@@ -53,7 +53,7 @@ Para ir além do Crud básico, decidi ver até onde conseguiria levar esse proje
 - Salvando sessões no Mongodb (para grande escala)
 - Soft Delete (nada é realmente deletado, somente oculto para os admins)
 - Grandes medidas de validação contra spam,  em todos os aspectos (comentários, curtidas, atomic update, votação/poll, pagamento)
-- E etc...
+- Outras validações e mecanismos de segurança distribuídos ao longo da aplicação.
 
 ### FrontEnd
 - TODAS as telas são adaptadas para qualquer tela
